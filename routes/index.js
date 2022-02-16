@@ -5,8 +5,8 @@ const User = db.User;
 //post
 router.post('/job-detail', (req, res) => {
     const data = {
-        profile:req.body.Designation,
-  location:req.body.Location,  
+  profile:req.body.profile,
+  location:req.body.location,  
   jobtype:req.body.jobtype,
   about:req.body.about
             };
