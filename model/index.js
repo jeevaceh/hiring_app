@@ -16,4 +16,5 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.User = require("./jobdetails")(sequelize, Sequelize);
+db.Candidate = require("./candidate")(sequelize, Sequelize);
 module.exports = db; //exporting db
