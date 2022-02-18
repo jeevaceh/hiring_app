@@ -14,6 +14,8 @@ app.use(function (req, res, next) {
 
 app.use('/api', require('./routes/index'));
 
+app.use('/pdf', express.static('./pdf'))
+
 
 const PORT = process.env.PORT || 8080;
 
