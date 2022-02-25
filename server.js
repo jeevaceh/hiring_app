@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
-app.use(express.json())
+app.use(express.json());
 const user = require("./model");
 user.sequelize.sync();
+app.use(express.urlencoded());
+const passwordReset = require("./routes/passwordReset");
 
 app.use(function (req, res, next) {
   //Enabling CORS
@@ -13,6 +15,8 @@ app.use(function (req, res, next) {
 });
 
 app.use('/api', require('./routes/index'));
+app.use('/api/password-reset',passwordReset);
+
 app.use('/pdf', express.static('./pdf'))
 
 

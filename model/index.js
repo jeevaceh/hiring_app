@@ -18,4 +18,5 @@ db.sequelize = sequelize;
 db.User = require("./jobdetails")(sequelize, Sequelize);
 db.Candidate = require("./candidate")(sequelize, Sequelize);
 db.regist=require("./register")(sequelize,Sequelize);
+db.token = require('./token')(sequelize,Sequelize);
 module.exports = db; //exporting db
